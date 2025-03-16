@@ -10,14 +10,13 @@ unsigned int faStr1(const char *str) {
     while (*str) {
         if (in_word == false && *str != ' ') {
             in_word = true;
-        }
-        else if (in_word == true && *str ==' ') {
+        } else if (in_word == true && *str ==' ') {
             if (has_numbers == false) count++;
             in_word = false;
             has_numbers = false;
         }
 
-        if (in_word ==true){
+        if (in_word ==true) {
             if ( '0' <= *str && *str <= '9') {
                 has_numbers = true;
             }
@@ -48,9 +47,8 @@ unsigned int faStr2(const char *str) {
         }
 
         if (in_word ==true){
-            if (is_bigger == true)
-            {
-                if (std::isupper(*str)) {
+            if (is_bigger == true) {
+                if (!('a' <= *str && *str <= 'z')) {
                     is_correct = false;
                 }
             }
@@ -71,7 +69,7 @@ unsigned int faStr3(const char *str) {
             in_word = true;
             count++;
         }
-        else if (in_word == true && *str ==' ') {
+        else if (in_word == true && *str == ' ') {
             if (has_numbers == false) count++;
             in_word = false;
             has_numbers = false;
