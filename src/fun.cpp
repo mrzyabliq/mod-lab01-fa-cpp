@@ -70,7 +70,6 @@ unsigned int faStr3(const char *str) {
             count++;
         }
         else if (in_word == true && *str == ' ') {
-            if (has_numbers == false) count++;
             in_word = false;
             has_numbers = false;
         }
