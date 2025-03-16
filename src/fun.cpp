@@ -45,14 +45,14 @@ unsigned int faStr2(const char *str) {
             is_correct = true;
             is_bigger = false;
         }
-
-        if (in_word ==true){
-            if (is_bigger == true) {
-                if (!('a' <= *str && *str <= 'z')) {
-                    is_correct = false;
+        else {
+            if (in_word ==true){
+                if (is_bigger == true) {
+                    if (!('a' <= *str && *str <= 'z')) {
+                        is_correct = false;
+                    }
                 }
             }
-            
         }
         *str++;
     }
