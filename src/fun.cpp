@@ -41,7 +41,7 @@ unsigned int faStr2(const char *str) {
             }
         }
         else if (in_word == true && *str ==' ') {
-            if (is_correct == true) count++;
+            if (is_correct == true && is_bigger == true) count++;
             in_word = false;
             is_correct = true;
             is_bigger = false;
@@ -83,5 +83,5 @@ unsigned int faStr3(const char *str) {
 
         *str++;
     }
-    return count;
+    return std::round(length/count);
 }
