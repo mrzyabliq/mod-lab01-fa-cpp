@@ -7,7 +7,7 @@ unsigned int faStr1(const char *str) {
     bool in_word = false;
     bool has_numbers = false;
     int count = 0;
-    while (*str) {
+    while (*str != '\0') {
         if (in_word == false && *str != ' ') {
             in_word = true;
         } else if (in_word == true && *str ==' ') {
@@ -21,7 +21,7 @@ unsigned int faStr1(const char *str) {
                 has_numbers = true;
             }
         }
-        *str++;
+        str++;
     }
     return count;
 }
@@ -31,7 +31,7 @@ unsigned int faStr2(const char *str) {
     bool is_bigger = false;
     bool is_correct = true;
     int count = 0;
-    while (*str) {
+    while (*str != '\0') {
         if (in_word == false && *str != ' ') {
             in_word = true;
             if (std::isupper(*str)) {
@@ -51,7 +51,7 @@ unsigned int faStr2(const char *str) {
                 }
             }
         }
-        *str++;
+        str++;
     }
     return count;
 }
@@ -61,7 +61,7 @@ unsigned int faStr3(const char *str) {
     bool has_numbers = false;
     int length = 0;
     int count = 0;
-    while (*str) {
+    while (*str != '\0') {
         if (in_word == false && *str != ' ') {
             in_word = true;
             count++;
@@ -73,8 +73,7 @@ unsigned int faStr3(const char *str) {
         if (in_word ==true) {
              length++;
         }
-
-        *str++;
+        str++;
     }
     return std::round(length/count);
 }
